@@ -1,13 +1,20 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-  </div>
+<div id="app">
+  <Header/>
+  <Profile/>
+  <router-view/>
+</div>
 </template>
 
 <script>
+import Header from '@/components/Header'
+import Profile from '@/components/Profile'
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Header,
+    Profile
+  }
 }
 </script>
 
@@ -18,6 +25,10 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+body {
+  margin: 0;
+  color: #e4d2d8;
+  padding-top: 8%;
 }
 </style>
