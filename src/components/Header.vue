@@ -37,8 +37,8 @@ export default {
 
 <style>
 .site-header {
-    top: 0; /* 基準の位置を画面の一番上に指定する */
-    left: 0; s
+    top: 0;
+    left: 0;
     display: block;
     color: #e4d2d8;
     font-weight: bold;
