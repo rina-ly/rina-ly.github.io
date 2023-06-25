@@ -1,20 +1,12 @@
 <template>
 <div id="app">
-  <Header/>
-  <Profile/>
   <router-view/>
 </div>
 </template>
 
 <script>
-import Header from '@/components/Header'
-import Profile from '@/components/Profile'
 export default {
-  name: 'App',
-  components: {
-    Header,
-    Profile
-  }
+  name: 'App'
 }
 </script>
 
@@ -30,5 +22,10 @@ body {
   margin: 0;
   color: #e4d2d8;
   padding-top: 8%;
+  font-family: sans-serif;
+}
+h2 {
+  margin: 0px;
+  font-size: xx-large;
 }
 </style>

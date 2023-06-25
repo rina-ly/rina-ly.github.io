@@ -3,12 +3,17 @@
         <div class='site-header-wrapper'>
             <a href='/' class='site-logo' >
                 <img :src='logo' :class="'logo-img'" />
-                <h1>portfolio</h1>
+                <h1>Rina Yamaguchi</h1>
             </a>
             <nav class='nav'>
                 <ul>
+                    <li class='header-li'>
+                        <a class='menu-item' href='/'>
+                            Top
+                        </a>
+                    </li>
                     <li v-for="(item, index) in items" :key=index :class="'header-li'" >
-                        <router-link v-bind:to=item.path :class="'menu-item'" >
+                        <router-link class='menu-item' :to="item.path">
                             {{ item.title }}
                         </router-link>
                     </li>
@@ -24,10 +29,10 @@ export default {
   data () {
     return {
       items: [
-        { title: 'Top', path: '/' },
         { title: 'Profile', path: '/#profile' },
         { title: 'Skills', path: '/#skills' },
-        { title: 'Outputs', path: '/#outputs' }
+        { title: 'Works', path: '/#works' },
+        { title: 'Certifications', path: '/#certifications' }
       ],
       logo: require('@/assets/rina-ly.png')
     }
@@ -43,6 +48,7 @@ export default {
     color: #e4d2d8;
     font-weight: bold;
     background-color: #d69090;
+    opacity: 0.9;
     height: 8%;
     width: 100%;
     position: fixed;
@@ -53,7 +59,7 @@ export default {
     margin: 0 5%;
 }
 .site-logo {
-    width: 40%;
+    width: 60%;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -61,11 +67,14 @@ export default {
     text-decoration: none;
 }
 h1 {
-    box-sizing: border-box;
-    font-size:  x-large;
-    font-family: sans-serif;
+    font-size: medium;
     margin: 0;
     margin-left: 8px;
+}
+@media screen and (min-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
 }
 .logo-img {
     height: 80%;
@@ -81,15 +90,25 @@ h1 {
 ul {
     list-style: none;
 }
+
 .header-li {
     height: 100%;
     display: inline-block;
-    font-size: large;
-    margin-left: 8px;
+    font-size: small;
+    margin-left: 2px;
 }
 .menu-item {
     height: 100%;
     color: white;
     text-decoration: none;
+}
+
+@media screen and (min-width: 480px) {
+    .header-li {
+        height: 100%;
+        display: inline-block;
+        font-size: large;
+        margin-left: 8px;
+    }
 }
 </style>
